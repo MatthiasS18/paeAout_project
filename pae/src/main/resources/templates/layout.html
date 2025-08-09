@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <section layout:fragment="contentCss"></section>
+    <link rel="stylesheet" th:href="@{/css/layout.css}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="header">Programme annuel des étudiants</div> -->
+
+        <header th:replace="~{allFragments::headerId(titre='Programme annuel des étudiants')}"></header>
+
+        <nav class="nav">
+            <a th:href="@{/}">🏠</a>
+            <a th:href="@{/courses}">Cours</a>
+            <a th:href="@{/students}">Etudiants</a>
+        </nav>
+
+
+        <section layout:fragment="content">
+        </section>
+
+
+
+        <div class="footer">HE2B-ESI / web2 / 2024_2025</div>
+
+
+    </div>
+</body>
+
+</html>

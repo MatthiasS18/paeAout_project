@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+
+<head>
+    <section layout:fragment="contentCss">
+        <link rel="stylesheet" th:href="@{/css/courses.css}">
+    </section>
+</head>
+
+<body>
+    <section layout:fragment="content">
+        <div th:unless="${courses.isEmpty()}">
+            <table>
+                <caption>Liste des cours</caption>
+                <thead>
+                    <tr>
+                        <th>Sigle</th>
+                        <th>Titre</th>
+                        <th>ECTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="course : ${courses}">
+                        <td>
+                            <a th:href="@{/detailCourse(courseId=${course.id})}" th:text="${course.id}"></a>
+                        </td>
+                        <td th:text="${course.title}"></td>
+                        <td th:text="${course.credits}"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <form action="/addCours" method="post" th:object="${cours}">
+                <h2>Ajouter un cours</h2>
+                Sigle <input type="text" th:field="*{id}" th:errorclass="errorField">
+                <span th:errors="*{id}" class="errorMsg">erreur</span>
+                <br>
+                <br>
+                Title <input type="text" th:field="*{title}" th:errorclass="errorField">
+                <span th:errors="*{title}" class="errorMsg">erreur</span>
+
+                <br>
+                <br>
+                ECTS <input type="text" th:field="*{credits}" th:errorclass="errorField">
+                <span th:errors="*{credits}" class="errorMsg">erreur</span>
+                <br>
+                <br>
+                <input type="submit" value="Ajouter">
+            </form>
+
+
+        </div>
+    </section>
+    <h2 th:if="${courses.isEmpty()}">None list</h2>
+</body>
+
+</html>

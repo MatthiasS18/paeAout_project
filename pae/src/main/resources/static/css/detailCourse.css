@@ -1,0 +1,43 @@
+/* Titre principal */
+.titleDetailCourse {
+    text-align: center;
+    font-size: 36px;
+    color: #0051ff;
+    margin-bottom: 30px;
+}
+
+/* Tables */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+thead td, thead th {
+    background-color: rgb(30, 98, 244);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody td, tfoot td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Lien retour */
+div a {
+    display: inline-block;
+    margin: 20px;
+    font-size: 18px;
+    color: #1e62f4;
+    text-decoration: none;
+}
+
+div a:hover {
+    text-decoration: underline;
+}

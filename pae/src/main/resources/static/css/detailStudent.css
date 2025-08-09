@@ -1,0 +1,31 @@
+
+  
+  /* ===== Table de détail ===== */
+  table {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  /* En-tête (tu utilises <td> dans thead, on cible donc thead td) */
+  .name {
+    background: rgb(30, 98, 244);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 14px;
+    border: 1px solid rgb(30, 98, 244);
+  }
+  
+  /* Corps */
+  tbody td {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    
+  }
+  
+
+

@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* occupe toute la hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* prend tout l’espace dispo entre header et footer */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(42, 52, 228);
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav {
+    background-color: rgb(208, 243, 255);
+    padding: 10px;
+}
+
+.nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.footer {
+    background-color: white;
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #ccc;
+}

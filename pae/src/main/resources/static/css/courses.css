@@ -1,0 +1,59 @@
+/* ===== Table générale ===== */
+table {
+    margin: 20px auto;
+    font-size: 1.1rem;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+thead tr th {
+    background-color: rgb(30, 98, 244);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+tbody td, tfoot td {
+    padding: 12px 20px;
+    border: 1px solid black;
+}
+
+/* ===== Lien dans tableau ===== */
+table a {
+    color: #1e62f4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Formulaire ===== */
+form {
+    margin: 30px auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #000;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.errorField{
+border: solid 2px red;
+}
+
+.errorMsg{
+color: red;
+}
+
+

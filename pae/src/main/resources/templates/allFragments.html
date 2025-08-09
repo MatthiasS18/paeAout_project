@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- FRAGMENT 1 -->
+    <header class="header" th:fragment="headerId(titre)">
+        <h1 th:text="${titre}">titre</h1>
+    </header>
+
+
+    <!-- FRAGMENT 2 -->
+    <table th:fragment="loopStudent(students)">
+        <thead>
+            <tr>
+                <td>Matricule</td>
+                <td>Nom</td>
+                <td>Genre</td>
+                <td>Section</td>
+            </tr>
+        </thead>
+        <tbody>
+            <div>
+                <tr th:each="student : ${students}">
+                    <td>
+                        <a th:href="@{/students/{studentId}(studentId=${student.id})}" th:text="${student.id}"></a>
+                    </td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.gender}"></td>
+                    <td th:text="${student.section}"></td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+
+
+
+    <!-- FRAGMENT 3 -->
+    <table th:fragment="detailStudent(student)">
+        <thead>
+            <tr>
+                <td class="name">Matricule</td>
+                <td th:text="${student.id}"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name">Nom</td>
+                <td th:text="${student.name}"></td>
+            </tr>
+            <tr>
+                <td class="name">Genre</td>
+                <td th:text="${student.gender}"></td>
+            </tr>
+            <tr>
+                <td class="name">Section</td>
+                <td th:text="${student.section}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <!-- FRAGMENT 4 -->
+    <table th:fragment="loopCourses(courses)">
+        <thead>
+            <tr>
+                <td class="name">Sigle</td>
+                <td class="name">Titre</td>
+                <td class="name">ECTS</td>
+            </tr>
+        </thead>
+        <tbody>
+            <div>
+                <tr th:each="course : ${courses}">
+                    <td th:text="${course.id}"></td>
+                    <td th:text="${course.title}"></td>
+                    <td th:text="${course.credits}"></td>
+                </tr>
+            </div>
+        </tbody>
+
+
+</html>

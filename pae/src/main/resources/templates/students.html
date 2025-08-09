@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <section layout:fragment="contentCss">
+        <link rel="stylesheet" th:href="@{/css/students.css}">
+    </section>
+</head>
+
+<body>
+    <section layout:fragment="content">
+        <table th:replace="~{allFragments::loopStudent(${students})}"></table>
+
+
+        <form action="/addStudent" method="post" th:object="${student}" style="margin-top:20px;">
+            <caption>Ajouter un étudiant</caption>
+            <br>
+            <br>
+            <label>Nom:
+                <input type="text" th:field="*{name}" />
+            </label>
+            <br><br>
+            <label>Section:
+                <select name="section" id="section">
+                    <option th:each="section : ${sections}" th:value="${section}" th:text="${section}"></option>
+                </select>
+            </label>
+            <br><br>
+            <input type="submit" value="Ajouter" />
+        </form>
+    </section>
+</body>
+
+</html>

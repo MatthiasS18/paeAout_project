@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <section layout:fragment="contentCss">
+        <link rel="stylesheet" th:href="@{/css/detailStudent.css}">
+    </section>
+</head>
+
+<body>
+
+    <section layout:fragment="content">
+
+        <div th:replace="~{/allFragments::detailStudent(${student})}"></div>
+        <div th:replace="~{/allFragments::loopCourses(${courses})}"></div>
+    </section>
+
+</body>
+
+</html>

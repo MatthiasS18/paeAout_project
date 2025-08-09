@@ -1,0 +1,49 @@
+/* ===== Table des étudiants ===== */
+table {
+    margin: 20px auto;
+    font-size: 1.1rem;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+table thead tr{
+    background-color: blue;
+    color: white;
+}
+
+
+
+ thead tr th {
+    background-color: rgb(30, 98, 244);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+tbody td, tfoot td {
+    padding: 12px 20px;
+    border: 1px solid black;
+}
+
+tbody td {
+    padding: 12px 20px;
+    border: 1px solid black;
+}
+
+
+form {
+    margin: 30px auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #000;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
